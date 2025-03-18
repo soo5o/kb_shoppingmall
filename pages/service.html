@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>고객센터</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+      header {
+        background-color: #007bff;
+        color: white;
+        padding: 15px 0;
+        text-align: center;
+        font-size: 24px;
+      }
+      .container {
+        width: 80%;
+        margin: 20px auto;
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h2 {
+        color: #333;
+      }
+      .faq-section {
+        margin-top: 30px;
+      }
+      .faq-item {
+        border-bottom: 1px solid #ddd;
+        padding: 10px 0;
+      }
+      .faq-item:last-child {
+        border-bottom: none;
+      }
+      .contact-section {
+        margin-top: 30px;
+      }
+      .contact-section p {
+        font-size: 18px;
+      }
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+      .contact-form button {
+        background-color: #28a745;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .contact-form button:hover {
+        background-color: #218838;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>고객센터</header>
+
+    <div class="container">
+      <h2>자주 묻는 질문 (FAQ)</h2>
+
+      <div class="faq-section">
+        <div class="faq-item">
+          <strong>Q1: 상품 주문은 어떻게 하나요?</strong>
+          <p>A1: 상품을 장바구니에 담은 후 결제 단계로 진행하시면 됩니다.</p>
+        </div>
+        <div class="faq-item">
+          <strong>Q2: 배송 기간은 얼마나 걸리나요?</strong>
+          <p>
+            A2: 보통 2~3일 이내에 배송됩니다. 다만, 지역에 따라 다를 수
+            있습니다.
+          </p>
+        </div>
+        <div class="faq-item">
+          <strong>Q3: 반품은 어떻게 하나요?</strong>
+          <p>
+            A3: 상품 수령 후 7일 이내에 고객센터를 통해 반품 신청을 하시면
+            됩니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="contact-section">
+        <h2>문의하기</h2>
+        <p>
+          문의 사항이 있으시면 아래 양식을 작성해 주세요. 빠르게 답변
+          드리겠습니다.
+        </p>
+        <div class="contact-form">
+          <input type="text" placeholder="이름" required />
+          <input type="email" placeholder="이메일" required />
+          <textarea placeholder="문의 내용" rows="5" required></textarea>
+          <button type="submit">보내기</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
