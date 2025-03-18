@@ -10,17 +10,17 @@
         document
           .getElementById("loginBtn")
           .addEventListener("click", function () {
-            window.location.href = "login.html";
+            window.location.href = "pages/login.html";
           });
         document
           .getElementById("signUpBtn")
           .addEventListener("click", function () {
-            window.location.href = "signUp.html";
+            window.location.href = "pages/signUp.html";
           });
         let products = document.getElementsByClassName("product");
         for (let i = 0; i < products.length; i++) {
           products[i].addEventListener("click", function () {
-            window.location.href = "detail.html";
+            window.location.href = "pages/detail.html";
           });
         }
       };
