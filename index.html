@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="main.css" rel="stylesheet" />
+    <script>
+      window.onload = function () {
+        document
+          .getElementById("loginBtn")
+          .addEventListener("click", function () {
+            window.location.href = "login.html";
+          });
+        document
+          .getElementById("signUpBtn")
+          .addEventListener("click", function () {
+            window.location.href = "signUp.html";
+          });
+        let products = document.getElementsByClassName("product");
+        for (let i = 0; i < products.length; i++) {
+          products[i].addEventListener("click", function () {
+            window.location.href = "detail.html";
+          });
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logo">Lorem, ipsum dolor</div>
+      <div class="nav-links">
+        <a href="#" class="userBtn">홈</a>
+        <a href="#" class="userBtn">상품</a>
+        <a href="#" class="userBtn">이벤트</a>
+        <a href="#" class="userBtn">고객센터</a>
+        <input
+          type="button"
+          name="login"
+          value="Login"
+          id="loginBtn"
+          class="userBtn"
+        />
+        <input
+          type="button"
+          name="SignUp"
+          value="SignUp"
+          id="signUpBtn"
+          class="userBtn"
+        />
+      </div>
+    </div>
+    <div class="banner">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit
+    </div>
+
+    <div class="products">
+      <div class="product">
+        <img
+          src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA5MDVfOTMg%2FMDAxNzI1NTE3NzA4NTk3.K5mdf-hePoXfH1TuzSuxW8qceFXxKxEageEgPSH0NWQg.R2dxfLXQ7rg4EwZgP_QLRMvBevJxyOkpbYBrsKukX_Mg.PNG%2F%25BA%25EA%25B8%25AF%25BA%25EA%25B6%25F31.PNG&type=sc960_832"
+          alt="상품"
+        />
+        <h3>운동화</h3>
+        <p>₩80,000</p>
+      </div>
+      <div class="product">
+        <img
+          src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNTAyMDRfMTM4%2FMDAxNzM4NjM2OTYxNTE0.qRPimzzercQuR6qdStFAJyGOUDoA0Gpu1ugipeFC2J8g.3PQMMF8zFL060aV1l9KykP04sBiUxYR-tWsE5qQufJ4g.PNG%2F%25BC%25BC%25BA%25EC%25C6%25BE_%25BD%25C2%25B0%25FC_%25B9%25DF%25B7%25BB%25BD%25C3%25BE%25C6%25B0%25A1_%25B8%25F0%25B3%25AA%25C4%25DA_%25B0%25A1%25B9%25E6_%25B3%25B2%25C0%25DA_%25B8%25ED%25C7%25B0_%25C5%25A9%25B7%25CE%25BD%25BA%25B9%25E9_%25BE%25F3%25B8%25B6_4.png&type=sc960_832"
+          alt="상품"
+        />
+        <h3>가방</h3>
+        <p>₩3,000,000</p>
+      </div>
+      <div class="product">
+        <img
+          src="https://thumbnail6.coupangcdn.com/thumbnails/remote/492x492ex/image/vendor_inventory/7d22/2fb091e5b52ae95adf19f22de9eda4d7467b32a12073878e3e29399783aa.jpg"
+          alt="상품"
+        />
+        <h3>맥북</h3>
+        <p>₩1,900,000</p>
+      </div>
+    </div>
+
+    <div class="footer">© 2025 MyShop. All rights reserved.</div>
+  </body>
+</html>
