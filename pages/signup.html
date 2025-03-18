@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입</title>
+    <style>
+      /* 기본적인 스타일 */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+
+      header {
+        background-color: #333;
+        color: white;
+        padding: 10px 0;
+        text-align: center;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+
+      nav ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+      }
+
+      nav a:hover {
+        text-decoration: underline;
+      }
+
+      main {
+        padding: 20px;
+        text-align: center;
+      }
+
+      /* 폼 스타일 */
+      form {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 400px;
+        margin: 20px auto;
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+      }
+
+      label {
+        display: block;
+        font-weight: bold;
+      }
+
+      input {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+
+      button {
+        width: 100%;
+        padding: 10px;
+        background-color: #333;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>나의 웹사이트</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">홈</a></li>
+          <li><a href="about.html">소개</a></li>
+          <li><a href="services.html">서비스</a></li>
+          <li><a href="contact.html">연락처</a></li>
+          <li><a href="signup.html">회원가입</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h2>회원가입</h2>
+      <form id="signup-form">
+        <div class="form-group">
+          <label for="username">아이디:</label>
+          <input type="text" id="username" name="username" required />
+        </div>
+        <div class="form-group">
+          <label for="email">이메일:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="password">비밀번호:</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <div class="form-group">
+          <label for="confirm-password">비밀번호 확인:</label>
+          <input
+            type="password"
+            id="confirm-password"
+            name="confirm-password"
+            required
+          />
+        </div>
+        <button type="submit">회원가입</button>
+      </form>
+    </main>
+
+    <script>
+      // 회원가입 폼 유효성 검사
+      document.addEventListener('DOMContentLoaded', function () {
+        const form = document.getElementById('signup-form');
+
+        form.addEventListener('submit', function (event) {
+          event.preventDefault();
+
+          const username = document.getElementById('username').value;
+          const email = document.getElementById('email').value;
+          const password = document.getElementById('password').value;
+          const confirmPassword =
+            document.getElementById('confirm-password').value;
+
+          // 비밀번호 일치 여부 확인
+          if (password !== confirmPassword) {
+            alert('비밀번호가 일치하지 않습니다.');
+            return;
+          }
+
+          // 기본적인 유효성 검사 통과 후 메시지 출력
+          alert('회원가입이 완료되었습니다!');
+        });
+      });
+    </script>
+  </body>
+</html>
